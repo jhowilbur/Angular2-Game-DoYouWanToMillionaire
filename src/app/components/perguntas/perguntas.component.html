@@ -1,0 +1,177 @@
+<div class="card">
+    <div class="box">
+        <div class="row">
+            <div class="img">
+                <img
+                    src="https://images.uncyc.org/pt/thumb/0/02/Show_do_Milh%C3%A3o_logo.gif/300px-Show_do_Milh%C3%A3o_logo.gif">
+            </div>
+        </div>
+
+        <!-- PERGUNTAS -->
+        <div class="container" *ngIf="contador==1">
+            <div class="row">
+                <h2>PERGUNTA 1<br>
+                    <span>
+                        Qual o grupo em que todas as palavras <br>
+                        foram escritas corretamente?
+                    </span>
+                </h2>
+            </div>
+
+            <div class="btn-group-vertical">
+                <button class="btn btn-light" (click)="clickCerto()"><b>a) Asterisco, beneficente, meteorologia,
+                        entretido</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>b) Asterístico, beneficiente, meteorologia,
+                        entertido</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>c) Asterisco, beneficente, metereologia,
+                        entretido</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>d) Asterisco, beneficiente, metereologia,
+                        entretido</b></button>
+            </div>
+
+        </div>
+
+        <div class="container" *ngIf="contador==2">
+            <div class="row">
+                <h2>PERGUNTA 2<br>
+                    <span>
+                        Por que Exaltasamba toca pagode <br>
+                        e Zeca Pagodinho toca samba?
+                    </span>
+                </h2>
+            </div>
+
+            <div class="btn-group-vertical">
+                <button class="btn btn-light" (click)="clickErrado()"><b>a) Não sei</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>b) Gosto de outras musicas</b></button>
+                <button class="btn btn-light" (click)="clickCerto()"><b>c) Zeca Pagodinho sempre tocou samba e Exalta
+                        Samba</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>d) Exalta Samba sempre tocou samba e Zeca
+                        Pagodinho</b></button>
+            </div>
+
+        </div>
+
+        <div class="container" *ngIf="contador==3">
+            <div class="row">
+                <h2>PERGUNTA 3<br>
+                    <span>
+                        Porque os mergulhadores se <br>
+                        jogam de costas ?
+                    </span>
+                </h2>
+            </div>
+
+            <div class="btn-group-vertical">
+                <button class="btn btn-light" (click)="clickErrado()"><b>a) Só sei que nada sei</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>b) Por normas de segurança</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>c) Não sei nada</b></button>
+                <button class="btn btn-light" (click)="clickCerto()"><b>d) Se eles se jogarem de frente caem no
+                        barco</b></button>
+            </div>
+
+        </div>
+
+        <div class="container" *ngIf="contador==4">
+
+            <div class="btn-group-vertical">
+                <button class="btn btn-danger" (click)="clickContinuar()"><b>PARABÉNS FALTAM DUAS
+                        QUESTÕES!!!</b><br>
+                    CLICK E CONTIUE
+                </button>
+            </div>
+
+        </div>
+
+        <div class="container" *ngIf="contador==5">
+            <div class="row">
+                <h2>PERGUNTA 4<br>
+                    <span>
+                        Quais são os três predadores do reino animal <br>
+                        reconhecidos pela habilidade de caçar em grupo, <br>
+                        se camuflar para surpreender as presas e possuir <br>
+                        sentidos apurados, respectivamente:
+                    </span>
+                </h2>
+            </div>
+
+            <div class="btn-group-vertical">
+                <button class="btn btn-light" (click)="clickErrado()"><b>a) Tubarão branco, crocodilo e
+                        sucuri</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>b) Tigre, gavião e orca</b></button>
+                <button class="btn btn-light" (click)="clickCerto()"><b>c) Hiena, urso branco e lobo
+                        cinzento</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>d) Leão, tubarão branco e urso
+                        cinzento</b></button>
+            </div>
+
+        </div>
+
+        <div class="container" *ngIf="contador==6">
+            <div class="row">
+                <h2>PERGUNTA 5<br>
+                    <span>
+                        De quem é a famosa frase <br>
+                        “Penso, logo isso non ecxiste?
+                    </span>
+                </h2>
+            </div>
+
+            <div class="btn-group-vertical">
+                <button class="btn btn-light" (click)="clickErrado()"><b>a) Descartes</b></button>
+                <button class="btn btn-light" (click)="clickFinal()"><b>b) Xico Xavier</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>c) Sócrates</b></button>
+                <button class="btn btn-light" (click)="clickErrado()"><b>d) Galileu Galilei</b></button>
+            </div>
+
+        </div>
+
+
+
+        <!-- FINAL DO MENU -->
+        <span *ngIf="contador >= 0">
+            <ul>
+                <li><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ nomeVindo }}</a></li>
+                <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i> {{ dinheiro }}</a></li>
+            </ul>
+        </span>
+
+        <!--  FINAL DO JOGO GANHOU -->
+        <div class="container" *ngIf="contador == -1">
+            <div class="row">
+                <div class="card align-middle">
+                    <div class="card-body">
+                        <h1><b style="color: red;">FIM DE JOGO</b></h1>
+                        <h2 class="card-title">Você acertou todas as questões!</h2>
+                        <h2 class="card-text">Você é o mais novo milionário!</h2>
+                        <h2 style="color: red;">R$ 1.000.000,00</h2>
+                        <p style="color: gray;">(jogo ainda em produção não nos responsabilizamos por extravios no
+                            dinheiro)</p>
+                        <a href="?" class="btn btn-primary">JOGUE NOVAMENTE</a><br>
+                        <img
+                            src="https://engoleessarealidade.com.br/wp-content/uploads/2017/04/silvio-santos-gif-animado-vade-cultura.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  FINAL DO JOGO PERDEU -->
+        <div class="container" *ngIf="contador == -2">
+            <div class="row">
+                <div class="card align-middle">
+                    <div class="card-body" #box>
+                        <h2><b style="color: red;">FIM DE JOGO</b></h2>
+                        <h5 class="card-title">Você errou a questão!</h5>
+                        <p class="card-text">Não desista, eu sei que você consegue, você pode ganhar!</p>
+                        <p style="color: gray;">(jogo ainda em produção não nos responsabilizamos por extravios no
+                            dinheiro)</p>
+                        <a href="?" class="btn btn-primary">TENTE NOVAMENTE</a><br>
+                        <img
+                            src="https://conteudo.imguol.com.br/c/entretenimento/01/2016/08/19/silvio-santos-no-teleton-de-2007-1471620801319_300x420.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

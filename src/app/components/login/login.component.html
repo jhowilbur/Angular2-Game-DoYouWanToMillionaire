@@ -1,0 +1,29 @@
+<span *ngIf="confirma < 10">
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h1><strong style="color: yellow;">SHOW DO MILHÃO</strong></h1>
+            <h2>Digite seu nome para começar o jogo</h2>
+            <p>(jogo ainda em testes)</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+                <form>
+                    <br><br>
+                    <div class="form-group">
+                        <label style="color: white;">Nome</label>
+                        <input type="text" class="form-control" placeholder="Digite seu nome" #boxNome
+                            (keyup)="onKeyNome(boxNome.value)">
+                    </div>
+                </form>
+                <button class="btn btn-black" (click)="entrar(boxNome.value)">ENTRAR</button>
+                <br>
+            </div>
+        </div>
+    </div>
+</span>
+
+<span *ngIf="confirma == 10">
+    <app-perguntas [nomeVindo]="nome"></app-perguntas>
+</span>
