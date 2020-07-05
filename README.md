@@ -1,4 +1,26 @@
-# ShowDoMilhao
+# Angular2 Game
+### System of questions in Angular 2
+------------
+
+------------
+##### Game created as tests of new tools to dynamize the website and the fluidity of the system, being necessary to load the page only once and all the other components provide the necessary dynamism not to call other sheets and pages of html and css, as typescript provides the objects needed for navigation.
+------------
+![Screenshot_1](https://user-images.githubusercontent.com/59379254/86537919-db49b980-bec8-11ea-999a-4548254879fd.png)
+------------
+![Screenshot_2](https://user-images.githubusercontent.com/59379254/86537922-e13f9a80-bec8-11ea-8a6e-f621653c0a7f.png)
+------------
+![Screenshot_3](https://user-images.githubusercontent.com/59379254/86537926-e3095e00-bec8-11ea-87c5-ce29460fcf04.png)
+------------
+the rest of the interfaces I leave you to risk playing:
+
+------------
+###### NgIf system, if the previous question is correct, go to the next question to take the place, and the previous question disappears.
+###### Something like an ok answer when you click, add some value within that click and the ngif identifies that updated value and erases the previous ngif by asking the new question.
+###### (Do this until you get 5 questions to update the page's route to another component that works with the same system but giving twice as much money for each hit) - better not put this part due to complexity.
+###### If you miss, the game is over.
+------------
+
+special thanks to you reader and the technologies below
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
