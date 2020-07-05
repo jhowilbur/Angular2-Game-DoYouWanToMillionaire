@@ -1,7 +1,7 @@
 # Angular2 Game
 ### System of questions in Angular 2
 ------------
-
+https://angular2milliongame.000webhostapp.com/
 ------------
 ##### Game created as tests of new tools to dynamize the website and the fluidity of the system, being necessary to load the page only once and all the other components provide the necessary dynamism not to call other sheets and pages of html and css, as typescript provides the objects needed for navigation.
 ------------
@@ -12,7 +12,7 @@
 ![Screenshot_3](https://user-images.githubusercontent.com/59379254/86537926-e3095e00-bec8-11ea-87c5-ce29460fcf04.png)
 ------------
 the rest of the interfaces I leave you to risk playing:
-
+https://angular2milliongame.000webhostapp.com/
 ------------
 ###### NgIf system, if the previous question is correct, go to the next question to take the place, and the previous question disappears.
 ###### Something like an ok answer when you click, add some value within that click and the ngif identifies that updated value and erases the previous ngif by asking the new question.
